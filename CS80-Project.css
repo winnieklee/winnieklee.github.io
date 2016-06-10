@@ -1,0 +1,54 @@
+html, body{
+	height: 100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#30bef2+0,f4ffff+100 */
+	background: #30bef2; /* Old browsers */
+	background: -moz-linear-gradient(top,  #30bef2 0%, #f4ffff 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #30bef2 0%,#f4ffff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #30bef2 0%,#f4ffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+
+.title .container h1{
+	font-family: Georgia, serif;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 20px;
+}
+.title .container h2{
+	font-family: Times , sans-serif;
+	text-align: center;
+}
+
+
+.user-input .container {
+	text-align: center;
+}
+
+
+#showList {
+	font-family: Georgia;
+}
+#showList h2{
+    text-decoration: underline;
+}
+#showList p{
+	font-size: 16px;
+}
+
+
+
+#showTime h2{
+	text-align: center;
+	font-family: Times;
+	text-decoration: underline;
+}
+#showTime p{
+	text-align: center;
+	font-family: Arial;
+	font-size: 20px;
+}
+
+#showTime .commentDisplay{
+	text-align: center;
+	font-size:  24px;
+}
