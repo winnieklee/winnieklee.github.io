@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TV Time Calculator</title>
+		<link rel="stylesheet" href="bootstrap.css">
+		<link rel="stylesheet" href="CS80-Project.css">
+		<script type="text/javascript" src="CS80-Project.js"></script>
+	</head>
+	<body>
+		<div class="body-wrapper">
+			<div class="title">
+				<div class="container">
+					<h1>How much time have you spent watching TV?</h1>
+					<h2>Time to calculate!</h2>
+				</div>
+			</div>
+			<div class="user-input">
+				<div class="container">
+					<label>TV Show Title: </label>
+					<input type="text" id="showTitle"/><br>
+					
+					<label># of episodes: </label>
+					<input type="number" id="numOfEpisodes"/><br>
+					
+					<label>Minutes per episode: </label>
+					<input type="number" id="minPerEpisode"/><br>
+					
+					<input type="button" value="Add" class="btn btn-success" onclick="addTime()"/>
+					<input type="button" value="Reset" class="btn btn-danger" onclick="resetList()"/>
+				</div>
+			</div>
+			<div class="display">
+				<div class="container">
+					<div class="col-sm-6" id="showList">
+						<h2>List of your shows</h2>
+						<p id="listDisplay"></p>
+					</div>
+					<div class="col-sm-6" id="showTime">
+						<h2>Total Time Spent:</h2>
+						<p id="timeDisplay"></p><br>
+						<p id="commentDisplay"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

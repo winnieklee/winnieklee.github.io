@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Warriors!</title>
+		<link rel="stylesheet" href="bootstrap.css">
+		<style>
+			html, body {
+				height: 100%;
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#05abe0+0,ebf43d+100 */
+				background: #05abe0; /* Old browsers */
+				background: -moz-linear-gradient(top,  #05abe0 0%, #ebf43d 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top,  #05abe0 0%,#ebf43d 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom,  #05abe0 0%,#ebf43d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			}
+			body a #nbaLogo {
+				float: left;
+			}
+			body a #espnLogo {
+				float: right;
+				margin-right: 10px;
+			}
+			
+			
+			.centerpiece .container h1 {
+				font-family: Georgia;
+				font-size: 48px;
+				font-weight: bold;
+				text-align: center;
+				color: blue;
+			}
+			.centerpiece .container img {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+
+			.players .container figure {
+				margin-left: 45px;
+				font-weight: bold;
+				text-align: center;
+				display: inline-block;
+				white-space: nowrap;
+				float: left;
+			}
+			.players .container h1 {
+				text-align: center;
+				color: blue;
+				font-family: Times;
+			}
+			
+			.stats .container {
+				margin-top: 20px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			
+			.stats table {
+				border: 2px solid black;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.stats table th {
+				text-align: center;
+				width: 75px;
+				border: 1px solid black;
+			}
+			.stats table td {
+				text-align: center;
+				border: 1px solid black;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			var stephenCurry = {
+				'position': 'PG',
+				'season': '2015/2016',
+				'points': 807,
+				'fieldgoal': .517,
+				'freethrow': .908,
+				'threepointers': 127,
+				'rebounds': 133,
+				'assists': 151,
+				'steals': 55,
+				'blocks': 3,
+				'turnovers': 93
+			};
+			var klayThompson = {
+				'position': 'SG',
+				'season': '2015/2016',
+				'points': 412,
+				'fieldgoal': .457,
+				'freethrow': .830,
+				'threepointers': 70,
+				'rebounds': 82,
+				'assists': 58,
+				'steals': 12,
+				'blocks': 19,
+				'turnovers': 46
+			};
+			var harrisonBarnes = { 
+				'position': 'SF',
+				'season': '2015/2016',
+				'points': 228,
+				'fieldgoal': .500,
+				'freethrow': .830,
+				'threepointers': 21,
+				'rebounds': 85,
+				'assists': 33,
+				'steals': 16,
+				'blocks': 3,
+				'turnovers': 18
+			};
+			var andreIguodala = {
+				'position': 'SF',
+				'season': '2015/2016',
+				'points': 197,
+				'fieldgoal': .497,
+				'freethrow': .600,
+				'threepointers': 27,
+				'rebounds': 124,
+				'assists': 95,
+				'steals': 38,
+				'blocks': 8,
+				'turnovers': 27
+			};
+			var draymondGreen = {
+				'position': 'PF',
+				'season': '2015/2016',
+				'points': 348,
+				'fieldgoal': .465,
+				'freethrow': .711,
+				'threepointers': 34,
+				'rebounds': 218,
+				'assists': 175,
+				'steals': 29,
+				'blocks': 38,
+				'turnovers': 73
+			};
+
+			function flashtext() {
+            var colorChecker = document.getElementById( 'blink' ).style.color;
+              if (colorChecker === 'blue') {
+                document.getElementById( 'blink' ).style.color = 'yellow';
+              } else {
+                document.getElementById( 'blink' ).style.color = 'blue';
+              }
+            }   
+			
+            setInterval( function() {
+                flashtext();
+            }, 500 );
+			
+			function showStats(playerName){
+				var tempObj;
+				switch(playerName)
+				{
+					case 'stephenCurry':
+						tempObj = stephenCurry;
+						break;
+					case 'klayThompson':
+						tempObj = klayThompson;
+						break;
+					case 'harrisonBarnes':
+						tempObj = harrisonBarnes;
+						break;
+					case 'andreIguodala':
+						tempObj = andreIguodala;
+						break;
+					case 'draymondGreen':
+						tempObj = draymondGreen;
+						break;
+				}
+				statsTable(tempObj);
+			}
+			
+			function statsTable(statsObj){
+				document.getElementById('playerPosition').innerHTML = statsObj.position;
+				document.getElementById('playerYear').innerHTML = statsObj.season;
+				document.getElementById('playerPTS').innerHTML = statsObj.points;
+				document.getElementById('playerFG').innerHTML = statsObj.fieldgoal;
+				document.getElementById('playerFT').innerHTML = statsObj.freethrow;
+				document.getElementById('player3PT').innerHTML = statsObj.threepointers;
+				document.getElementById('playerREB').innerHTML = statsObj.rebounds;
+				document.getElementById('playerAST').innerHTML = statsObj.assists;
+				document.getElementById('playerSTL').innerHTML = statsObj.steals;
+				document.getElementById('playerBLK').innerHTML = statsObj.blocks;
+				document.getElementById('playerTO').innerHTML = statsObj.turnovers;
+			}
+			
+		</script>	
+	</head>
+	<body onload="flashtext()">
+		<a href="http://www.nba.com">
+			<img src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png?transparent=true"
+			alt="NBA Logo" height="50" width="50" id="nbaLogo">
+		</a>
+		<a href="http://espn.go.com/nba">
+			<img src="https://upload.wikimedia.org/wikipedia/fr/archive/9/9b/20080618222918!Logo_ESPN.png"
+			alt="ESPN Logo" height="50" width="100" id="espnLogo">
+		</a>
+		<div class="centerpiece">
+			<div class="container">
+				<h1 id="blink">Go Warriors!</h1>
+				<img src="https://s3.graphiq.com/sites/default/files/5881/media/images/_4173363.png" height="250" width="250" alt="Warriors Logo">
+			</div>
+		</div>
+		<div class="players">
+			<div class="container">
+				<h1>Click the player's image to view stats!</h1>
+				<figure>
+					<img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png" height="127" width="175" alt="Stephen Curry"
+					onmouseover="this.src='http://wanafricasport.com/wp-content/uploads/Stephen-Curry-350x250.png'"
+					onmouseout="this.src='http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png'"
+					onclick="showStats('stephenCurry')">
+					<figcaption>Stephen Curry</figcaption>
+				</figure>
+				<figure>
+					<img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6475.png" height="127" width="175" alt="Klay Thompson"
+					onmouseover="this.src='http://wac.450f.edgecastcdn.net/80450F/973espn.com/files/2015/02/klay-thompson.jpg'"
+					onmouseout="this.src='http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6475.png'"
+					onclick="showStats('klayThompson')">
+					<figcaption>Klay Thompson</figcaption>
+				</figure>
+				<figure>
+					<img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6578.png" height="127" width="175" alt ="Harrison Barnes"
+					onmouseover="this.src='http://downtownball.net/wp-content/uploads/2013/12/Barnes.jpg'"
+					onmouseout="this.src='http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6578.png'"
+					onclick="showStats('harrisonBarnes')">
+					<figcaption>Harrison Barnes</figcaption>
+				</figure>
+				<figure>
+					<img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2386.png" height="127" width="175" alt="Andre Iguodala"
+					onmouseover="this.src='http://courtsurfing.hoopsbot.com/wp-content/uploads/sites/2/2015/10/Andre-Iguodala.jpg'"
+					onmouseout="this.src='http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2386.png'"
+					onclick="showStats('andreIguodala')">
+					<figcaption>Andre Iguodala</figcaption>
+				</figure>
+				<figure>	
+					<img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6589.png" height="127" width="175" alt="Draymond Green"
+					onmouseover="this.src='https://dimeathletics.com/wp-content/uploads/2015/10/Draymon-Green.jpg'"
+					onmouseout="this.src='http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6589.png'"
+					onclick="showStats('draymondGreen')">
+					<figcaption>Draymond Green</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class="stats">
+			<div class="container">
+				<table>
+					<thead>
+						<tr>
+							<th colspan="11">Season Stats</th>
+						</tr>
+						<tr>
+							<th>POS</th>
+							<th>YRS</th>
+							<th>PTS</th>
+							<th>FG%</th>
+							<th>FT%</th>
+							<th>3PT</th>
+							<th>REB</th>
+							<th>AST</th>
+							<th>STL</th>
+							<th>BLK</th>
+							<th>TO</th>
+						</tr>
+					</thead>
+					<tr>
+						<td id="playerPosition"></td>
+						<td id="playerYear"></td>
+						<td id="playerPTS"></td>
+						<td id="playerFG"></td>
+						<td id="playerFT"></td>
+						<td id="player3PT"></td>
+						<td id="playerREB"></td>
+						<td id="playerAST"></td>
+						<td id="playerSTL"></td>
+						<td id="playerBLK"></td>
+						<td id="playerTO"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
